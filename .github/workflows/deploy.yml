@@ -1,4 +1,4 @@
-name: Deploy Beta Site
+name: Deploy Astro Site
 
 on:
   # Trigger the workflow every time you push to the `main` branch
