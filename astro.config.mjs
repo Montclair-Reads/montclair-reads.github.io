@@ -5,6 +5,5 @@ import solidJs from "@astrojs/solid-js";
 // https://astro.build/config
 export default defineConfig({
   integrations: [solidJs()],
-  site: 'https://montclair-reads.github.io',
-  base: '/beta'
+  site: 'https://montclair-reads.github.io'
 });
