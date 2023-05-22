@@ -12,7 +12,7 @@ export type ArticleCardData = {
 
 export const IssueCard = (props: IssueCardData) => {
     const imgURL = `https://assets.api.bookcreator.com/${props.id.replace('/', '/books/')}/cover/`;
-    const linkURL = `/beta/issue/#${props.id}`;
+    const linkURL = `/issue/#${props.id}`;
 
     return (
         <a href={linkURL} class="Card">
@@ -28,13 +28,13 @@ const ArticleClick = (slug: string) => {
 
     const main = document.querySelector('main') as HTMLElement;
     const iframe = document.createElement('iframe');
-    iframe.src = `/beta/articles/${slug}/index.html`;
+    iframe.src = `/articles/${slug}/index.html`;
     main.appendChild(iframe);
 }
 
 export const ArticleCard = (props: ArticleCardData) => (
-    <a href={`/beta/articles/#${props.slug}`} class="Card" onClick={() => ArticleClick(props.slug)}>
-        <img src={`/beta/articles/${props.slug}/thumbnail.png`} alt="Cover Image" />
+    <a href={`/articles/#${props.slug}`} class="Card" onClick={() => ArticleClick(props.slug)}>
+        <img src={`/articles/${props.slug}/thumbnail.png`} alt="Cover Image" />
         <span>{props.name}</span>
     </a>
 );
