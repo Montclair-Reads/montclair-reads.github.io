@@ -1,0 +1,53 @@
+---
+import Navbar from '../components/Navbar';
+
+import type { LinkData } from '../components/Navbar';
+
+import '../styles/index.css';
+
+import logo from '/logo.png';
+
+export interface Props {
+	title: string;
+}
+
+const navLinks: LinkData[] = [
+	{
+		title: "Articles",
+		url: '/beta/articles'
+	},
+	{
+		title: "FAQ",
+		url: '/beta/faq'
+	},
+	{
+		title: "Join The Crew!",
+		url: 'https://docs.google.com/forms/d/e/1FAIpQLSc_PgtmWmGLWWx75djbreP_sBeFTvyN9A98GmL0Pf2OpMA3gQ/viewform'
+	},
+	{
+		title: "Legacy Site",
+		url: '/legacy/'
+	}
+]
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="The Montclair Elementary newspaper website.">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+	</head>
+	<body>
+		<Navbar title="The Red-Tailed Read" links={navLinks} logo={logo} />
+		<slot />
+	</body>
+</html>

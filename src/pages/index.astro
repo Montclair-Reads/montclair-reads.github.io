@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { IssueCards } from '../components/Cards';
+
+import type { IssueCardData } from '../components/Card';
+
+export const issues: IssueCardData[] = [
+	{
+		id: 'myUiW2VB_o8X0LAiPkSi6dn44Z4eBJVtiEQftGKPfog/6o-PWJrySZupJksSf0iYMA',
+		datePublished: "March 8th, 2023"
+	}
+]
+---
+
+<Layout title="The Red-Tailed Read">
+	<main>
+		<IssueCards issues={issues} />
+	</main>
+</Layout>

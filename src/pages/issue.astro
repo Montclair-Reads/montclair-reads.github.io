@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import '../styles/iframe.css';
+---
+<Layout title="The Red-Tailed Read">
+    <main>
+        <iframe />
+    </main>
+</Layout>
+
+<script>
+    const id: string = window.location.hash.replace('#', '');
+
+    const iframe = document.querySelector('iframe') as HTMLIFrameElement;
+    iframe.src = `https://read.bookcreator.com/${id}`;
+</script>

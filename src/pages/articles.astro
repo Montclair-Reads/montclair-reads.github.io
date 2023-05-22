@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { ArticleCards } from '../components/Cards';
+
+import type { ArticleCardData } from '../components/Card';
+
+import '../styles/Card.css';
+import '../styles/Cards.css';
+import '../styles/iframe.css';
+
+export const articles: ArticleCardData[] = [
+    {
+        name: "UBTW Extension Article",
+        slug: 'ubtw'
+    }
+]
+---
+
+<Layout title="The Red-Tailed Read">
+	<main>
+		<ArticleCards articles={articles} client:only />
+	</main>
+</Layout>
+
+<script>
+    const addIframe = () => {
+        const main = document.querySelector('main') as HTMLElement;
+        const iframe = document.createElement('iframe');
+        iframe.src = `/beta/articles/${window.location.hash.replace('#', '')}/index.html`;
+        main.appendChild(iframe);
+    }
+
+    const removeCards = () => {
+        const cards = document.querySelector('.Cards');
+        if (cards == null) {
+            setTimeout(removeCards, 50);
+            return;
+        }
+        cards.remove();
+        addIframe();
+    }
+
+    if (window.location.hash != '') {
+        removeCards();
+    }
+</script>

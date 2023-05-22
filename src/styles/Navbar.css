@@ -1,0 +1,45 @@
+:root {
+    --nav-height: 65px;
+}
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: var(--nav-height);
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    z-index: 2;
+    margin-top: 0;
+}
+
+nav a,
+nav > .links {
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    height: var(--nav-height);
+    flex-direction: row;
+}
+
+nav > .links {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > .home {
+    margin-left: 6px;
+    font-weight: bold;
+    font-size: 125%;
+}
+
+nav > .home > img {
+    height: 80%;
+    margin-right: 1vw;
+    border-radius: 25%;
+}

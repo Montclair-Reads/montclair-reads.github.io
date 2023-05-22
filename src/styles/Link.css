@@ -1,0 +1,10 @@
+a.Link {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    color: #00b;
+}
+
+a.Link:hover {
+    text-decoration: underline;
+}

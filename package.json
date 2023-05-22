@@ -1,0 +1,19 @@
+{
+  "name": "red-tailed-read-website",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "^2.2.0",
+    "astro": "^2.5.0",
+    "solid-js": "^1.7.5",
+    "typescript-plugin-css-modules": "^5.0.1"
+  }
+}

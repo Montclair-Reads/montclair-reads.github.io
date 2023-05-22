@@ -1,0 +1,20 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #000;
+    justify-content: center;
+    max-width: 250px;
+}
+
+.Card > span {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.Card > img {
+    border: 1px solid #666;
+    border-radius: 10px;
+}
