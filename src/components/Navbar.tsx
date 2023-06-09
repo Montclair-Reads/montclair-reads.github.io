@@ -1,6 +1,7 @@
 import { For, Show } from "solid-js";
 
 import '../styles/Navbar.css';
+import Profile from "./Profile";
 
 export type LinkData = {
     title: string,
@@ -25,6 +26,7 @@ export default (props: NavbarProps) => (
             <For each={props.links}>{ link =>
                 <a href={link.url}>{link.title}</a>
             }</For>
+            <Profile />
         </div>
     </nav>
 );

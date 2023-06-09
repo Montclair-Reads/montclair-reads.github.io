@@ -1,3 +1,7 @@
+:root {
+    --margin: 12px;
+}
+
 html, body {
     position: absolute;
     margin: 0;

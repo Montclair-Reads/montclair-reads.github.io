@@ -1,0 +1,14 @@
+.signin {
+    background: transparent;
+    border: 1.5px solid #aaa;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 85%;
+}
+
+.profile {
+    border-radius: 50%;
+    height: calc(var(--nav-height) - var(--margin));
+    cursor: pointer;
+}

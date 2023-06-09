@@ -47,7 +47,7 @@ const { title } = Astro.props;
 		<link rel="manifest" href="/favicon/site.webmanifest">
 	</head>
 	<body>
-		<Navbar title="The Red-Tailed Read" links={navLinks} logo={logo} />
+		<Navbar title="The Red-Tailed Read" links={navLinks} logo={logo} client:only />
 		<slot />
 	</body>
 </html>
