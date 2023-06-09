@@ -6,12 +6,15 @@ import { Show, Suspense, createResource } from 'solid-js';
 const supabase = createClient('https://gttbecgbgahrgdtcmbyt.supabase.co', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0dGJlY2diZ2FocmdkdGNtYnl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODYyNjU4NDMsImV4cCI6MjAwMTg0MTg0M30.FbNUrvSqciFVU7LuW4UWDtkT107mbwjXkiD6AvtZxvM");
 
 const getUser = async () => {
-    console.log(await supabase.auth.getUser());
+    console.log((await supabase.auth.getUser()).data.user);
     return await supabase.auth.getUser() != null ? (await supabase.auth.getUser()).data.user : null
 };
 
 const signInGoogle = () => supabase.auth.signInWithOAuth({
-    provider: 'google',
+    provider: 'azure',
+    options: {
+        scopes: "email"
+    }
 });
 
 const onClick = () => {
