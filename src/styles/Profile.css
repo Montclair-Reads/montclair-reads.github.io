@@ -12,3 +12,13 @@
     height: calc(var(--nav-height) - var(--margin));
     cursor: pointer;
 }
+
+.profile-dropdown {
+    right: calc(var(--margin) * 3);
+    top: calc(var(--nav-height));
+    z-index: 100;
+}
+
+.hidden {
+    display: none !important;
+}
