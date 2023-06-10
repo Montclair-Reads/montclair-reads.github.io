@@ -11,20 +11,17 @@ const getUser = async () => {
 };
 
 const signInGoogle = () => supabase.auth.signInWithOAuth({
-    provider: 'azure',
-    options: {
-        scopes: "email"
-    }
+    provider: 'google'
 });
-
-const onClick = () => {
-    
-}
 
 // supabase.auth.signOut();
 
 export default () => {
     const [user] = createResource(getUser);
+
+    const onClick = () => {
+    
+    }
 
     return <Suspense fallback={<button class="signin" onClick={signInGoogle}>Sign In</button>}>
         <Show when={user() != null} fallback={<button class="signin" onClick={signInGoogle}>Sign In</button>}>
