@@ -29,9 +29,9 @@ export default () => {
         </Show>
         <Dropdown class="profile-dropdown hidden" ref={dropdown} options={[
             {
-                title: "Log Out",
-                onSelect: () => {
-                    supabase.auth.signOut();
+                title: "Sign Out",
+                onSelect: async () => {
+                    await supabase.auth.signOut();
                     window.location.reload();
                 }
             },
